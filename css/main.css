@@ -1,17 +1,36 @@
+/* FONTS */
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("/fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* GLOBAL */
 html {
     height: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+* {
+    padding: 0;
+    margin: 0;
+}
+*:focus {
+    outline: 2px dashed #7378e1;
+    outline-offset: 2px;
+}
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
-
 body {
+    font-family: "Montserrat";
+    font-weight: bold;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -27,9 +46,160 @@ img {
 /* CONTAINER */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1540px;
     padding-left: 50px;
     padding-right: 50px;
     margin-right: auto;
     margin-left: auto;
+}
+
+/* PRICE */
+.price-wrapper {
+    background-color: #F7F7FE;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    background-image: url("/image/decoration-top.svg"),
+    url("/image/decoration-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+}
+.price-title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #6E728E;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+.payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 65px;
+}
+.payment-text {
+    font-size: 15px;
+    line-height: 28px;
+    color: #6E728E;
+    opacity: 0.5;
+}
+.payment-button {
+    position: relative;
+    width: 56px;
+    height: 32px;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    border-radius: 16px;
+    border: none;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.payment-button:hover {
+    opacity: 0.5;
+}
+.payment-button__circle {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.payment-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.payment-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 288px;
+    background-color: #fff;
+    padding: 31px;
+    box-sizing: content-box;
+    color: #6E728E;
+}
+.card-1 {
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    border-radius: 10px 0px 0px 10px;
+}
+.card-2 {
+    height: 500px;
+    color: #fff;
+    background: linear-gradient(135.06deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    border-radius: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.card-3 {
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    border-radius: 0px 10px 10px 0px;
+}
+.payment-card__title {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+.payment-card__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    line-height: 71px;
+    letter-spacing: -2.16px;
+    color: #4A4D60;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #dbdce3;
+}
+.payment-card__price::before {
+    content: "$";
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -1.2px;
+    margin-right: 8px;
+}
+.card-2__price {
+    color: #FFFFFF;
+}
+.payment-card__text {
+    padding: 12px;
+    font-size: 15px;
+    line-height: 28px;
+    border-bottom: 1px solid #dbdce3;
+}
+.payment-card__link {
+    display: block;
+    margin-top: 32px;
+    padding: 14px;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1.39286px;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    border-radius: 6px;
+    color: #FFFFFF;
+    text-decoration: none;
+    max-height: 44px;
+}
+.payment-card__link:hover {
+    border: 1px solid #6D72DE;
+    color: #6D72DE;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+.card-2__link {
+    background: #FFFFFF;
+    color: #6D72DE;
+    max-height: 44px;
+}
+.card-2__link:hover {
+    background: #7378e1;
+    border: 1px solid #fff;
+    color: #FFFFFF;
 }
