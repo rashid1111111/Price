@@ -107,6 +107,9 @@ img {
     border-radius: 50%;
     background-color: #fff;
 }
+.payment-button__circle-js {
+    left: 4px;
+}
 .payment-cards {
     display: flex;
     align-items: center;
